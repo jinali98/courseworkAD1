@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data;
 using System.Data.SqlClient;
-using System.Data;
 
 namespace courseworkAD1
 {
@@ -19,6 +14,15 @@ namespace courseworkAD1
             // updated the db with the lates data
             command.ExecuteNonQuery();
             con.Close();
+        }
+
+        public SqlDataAdapter readData(string cmd, DataTable dt)
+        {
+            //DataTable dt = new DataTable();
+            SqlCommand command = new SqlCommand(cmd, con);
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            adapter.SelectCommand = command;
+            return adapter;
         }
     }
 }

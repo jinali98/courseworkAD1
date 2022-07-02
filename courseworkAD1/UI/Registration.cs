@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using courseworkAD1.BusinessObjects;
 using courseworkAD1.BLL;
+using courseworkAD1.UI;
 
 namespace courseworkAD1
 {
@@ -50,6 +51,16 @@ namespace courseworkAD1
 
 
             
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+           
+            this.Hide();
+            Login login = new Login();
+            login.Show();
+            
+          
         }
     }
 }

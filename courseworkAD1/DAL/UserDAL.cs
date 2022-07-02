@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using courseworkAD1.BusinessObjects;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
-using courseworkAD1.BusinessObjects;
 
 namespace courseworkAD1.DAL
 {
     public class UserDAL
     {
-        public DialogResult createUser(UserBO obj) 
+        public DialogResult createUser(UserBO obj)
         {
             try
             {
@@ -22,11 +17,33 @@ namespace courseworkAD1.DAL
                 con.createAndUpdate(cmd);
                 return MessageBox.Show("Successfully Registered");
 
-            } catch
+            }
+            catch
             {
                 throw;
             }
-           
+
+        }
+
+        public DataTable verifyUserWhenLogin(UserBO obj)
+        {
+            try
+            {
+                string cmd = "SELECT * FROM Users WHERE email='" + obj.Email + "' AND password='" + obj.Password + "'";
+
+                dbConnection con = new dbConnection();
+                DataTable dt = new DataTable();
+                SqlDataAdapter adapter = con.readData(cmd, dt);
+
+                adapter.Fill(dt);
+                return dt;
+
+
+            }
+            catch
+            {
+                throw;
+            }
         }
 
     }
