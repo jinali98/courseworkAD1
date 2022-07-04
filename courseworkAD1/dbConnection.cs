@@ -24,5 +24,13 @@ namespace courseworkAD1
             adapter.SelectCommand = command;
             return adapter;
         }
+
+        public void deleteData(string cmd)
+        {
+            con.Open();
+            SqlCommand command = new SqlCommand(cmd, con);
+            command.ExecuteNonQuery();
+            con.Close();
+        }
     }
 }

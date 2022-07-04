@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using courseworkAD1.BLL;
 using courseworkAD1.BusinessObjects;
-using courseworkAD1.BLL;
 using courseworkAD1.UI;
+using System;
+using System.Windows.Forms;
 
 namespace courseworkAD1
 {
@@ -43,24 +36,34 @@ namespace courseworkAD1
 
                 UserBLL userBLL = new UserBLL();
                 userBLL.saveNewUser(obj);
-            } catch
+
+                CurrentUserBO cuObj = new CurrentUserBO();
+                cuObj.UseridCurrentUser = userid;
+                cuObj.EmailCurrentUser = email;
+                cuObj.TypeCurrentUser = userType;
+
+                this.Hide();
+                UserDashboard userDashboard = new UserDashboard();
+                userDashboard.Show();
+            }
+            catch
             {
                 MessageBox.Show("Error Occurred");
             }
-            
 
 
-            
+
+
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-           
+
             this.Hide();
             Login login = new Login();
             login.Show();
-            
-          
+
+
         }
     }
 }

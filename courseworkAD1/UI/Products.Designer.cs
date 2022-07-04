@@ -38,6 +38,8 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.txtProductId = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
             this.SuspendLayout();
@@ -63,6 +65,7 @@
             this.btnUnitsTb.TabIndex = 4;
             this.btnUnitsTb.Text = "Units";
             this.btnUnitsTb.UseVisualStyleBackColor = true;
+            this.btnUnitsTb.Click += new System.EventHandler(this.btnUnitsTb_Click);
             // 
             // btnCustomersTb
             // 
@@ -72,6 +75,7 @@
             this.btnCustomersTb.TabIndex = 3;
             this.btnCustomersTb.Text = "Customers";
             this.btnCustomersTb.UseVisualStyleBackColor = true;
+            this.btnCustomersTb.Click += new System.EventHandler(this.btnCustomersTb_Click);
             // 
             // btnProductsTb
             // 
@@ -90,6 +94,7 @@
             this.btnJobsTb.TabIndex = 1;
             this.btnJobsTb.Text = "Jobs";
             this.btnJobsTb.UseVisualStyleBackColor = true;
+            this.btnJobsTb.Click += new System.EventHandler(this.btnJobsTb_Click);
             // 
             // btnHomeTb
             // 
@@ -99,11 +104,16 @@
             this.btnHomeTb.TabIndex = 0;
             this.btnHomeTb.Text = "Home";
             this.btnHomeTb.UseVisualStyleBackColor = true;
+            this.btnHomeTb.Click += new System.EventHandler(this.btnHomeTb_Click);
             // 
             // dgvProducts
             // 
+            this.dgvProducts.AllowUserToAddRows = false;
+            this.dgvProducts.AllowUserToDeleteRows = false;
+            this.dgvProducts.AllowUserToResizeColumns = false;
+            this.dgvProducts.AllowUserToResizeRows = false;
             this.dgvProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProducts.Location = new System.Drawing.Point(19, 153);
+            this.dgvProducts.Location = new System.Drawing.Point(19, 130);
             this.dgvProducts.Name = "dgvProducts";
             this.dgvProducts.RowHeadersWidth = 51;
             this.dgvProducts.RowTemplate.Height = 24;
@@ -118,30 +128,53 @@
             this.btnUpdate.TabIndex = 5;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(656, 229);
+            this.btnDelete.Location = new System.Drawing.Point(615, 384);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(108, 35);
             this.btnDelete.TabIndex = 6;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(656, 306);
+            this.btnAdd.Location = new System.Drawing.Point(656, 234);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(108, 35);
             this.btnAdd.TabIndex = 7;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // txtProductId
+            // 
+            this.txtProductId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProductId.Location = new System.Drawing.Point(196, 386);
+            this.txtProductId.Name = "txtProductId";
+            this.txtProductId.Size = new System.Drawing.Size(374, 30);
+            this.txtProductId.TabIndex = 8;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(61, 386);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(103, 25);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Product ID";
             // 
             // Products
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(831, 455);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtProductId);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
@@ -149,9 +182,11 @@
             this.Controls.Add(this.panel1);
             this.Name = "Products";
             this.Text = "Products";
+            this.Load += new System.EventHandler(this.Products_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -167,5 +202,7 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.TextBox txtProductId;
+        private System.Windows.Forms.Label label1;
     }
 }

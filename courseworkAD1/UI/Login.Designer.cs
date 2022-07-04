@@ -57,6 +57,7 @@
             this.btnRegConfirm.TabIndex = 20;
             this.btnRegConfirm.Text = "Register";
             this.btnRegConfirm.UseVisualStyleBackColor = true;
+            this.btnRegConfirm.Click += new System.EventHandler(this.btnRegConfirm_Click);
             // 
             // txtRegPassword
             // 
