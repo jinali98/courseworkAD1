@@ -1,8 +1,8 @@
 ﻿using courseworkAD1.BLL;
 using courseworkAD1.BusinessObjects;
 using System;
+using System.Data;
 using System.Windows.Forms;
-
 namespace courseworkAD1.UI
 {
     public partial class Login : Form
@@ -29,11 +29,27 @@ namespace courseworkAD1.UI
                 obj.Password = password;
 
                 UserBLL userBLL = new UserBLL();
-                Boolean isTrue = userBLL.verifyUserWhenLogin(obj);
+                DataTable dt = userBLL.verifyUserWhenLogin(obj);
+                CurrentUserBO cuObj = new CurrentUserBO();
 
-                if (isTrue)
+
+                if (dt.Rows[0][3].ToString() == "admin")
                 {
-                    MessageBox.Show("Loggedin");
+                    cuObj.UseridCurrentUser = dt.Rows[0][0].ToString();
+                    cuObj.EmailCurrentUser = dt.Rows[0][1].ToString();
+                    cuObj.TypeCurrentUser = dt.Rows[0][3].ToString();
+                    this.Hide();
+                    AdminDashboard adminDashboard = new AdminDashboard();
+                    adminDashboard.Show();
+                }
+                else if (dt.Rows[0][3].ToString() == "user")
+                {
+                    cuObj.UseridCurrentUser = dt.Rows[0][0].ToString();
+                    cuObj.EmailCurrentUser = dt.Rows[0][1].ToString();
+                    cuObj.TypeCurrentUser = dt.Rows[0][3].ToString();
+                    this.Hide();
+                    UserDashboard userDashboard = new UserDashboard();
+                    userDashboard.Show();
                 }
                 else
                 {
@@ -45,6 +61,13 @@ namespace courseworkAD1.UI
             {
                 MessageBox.Show("Error Occurred");
             }
+        }
+
+        private void btnRegConfirm_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Registration registration = new Registration();
+            registration.Show();
         }
     }
 }

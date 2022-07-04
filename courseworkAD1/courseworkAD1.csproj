@@ -46,11 +46,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\ProductBLL.cs" />
     <Compile Include="BLL\UserBLL.cs" />
     <Compile Include="BusinessObjects\CurrentUserBO.cs" />
+    <Compile Include="BusinessObjects\ProductBO.cs" />
     <Compile Include="BusinessObjects\UserBO.cs" />
+    <Compile Include="DAL\ProductDAL.cs" />
     <Compile Include="DAL\UserDAL.cs" />
     <Compile Include="dbConnection.cs" />
+    <Compile Include="UI\AddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AddProduct.Designer.cs">
+      <DependentUpon>AddProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\AdminDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +84,7 @@
     <Compile Include="UI\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Navigation.cs" />
     <Compile Include="UI\Products.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,12 +105,21 @@
     <Compile Include="UI\Units.Designer.cs">
       <DependentUpon>Units.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\UpdateProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UpdateProduct.Designer.cs">
+      <DependentUpon>UpdateProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\UserDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\UserDashboard.Designer.cs">
       <DependentUpon>UserDashboard.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\AddProduct.resx">
+      <DependentUpon>AddProduct.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,6 +149,9 @@
     </Compile>
     <EmbeddedResource Include="UI\Units.resx">
       <DependentUpon>Units.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UpdateProduct.resx">
+      <DependentUpon>UpdateProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UserDashboard.resx">
       <DependentUpon>UserDashboard.cs</DependentUpon>
