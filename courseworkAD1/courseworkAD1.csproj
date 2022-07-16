@@ -47,11 +47,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\ProductBLL.cs" />
+    <Compile Include="BLL\UnitsBLL.cs" />
     <Compile Include="BLL\UserBLL.cs" />
     <Compile Include="BusinessObjects\CurrentUserBO.cs" />
     <Compile Include="BusinessObjects\ProductBO.cs" />
+    <Compile Include="BusinessObjects\UnitsBO.cs" />
     <Compile Include="BusinessObjects\UserBO.cs" />
     <Compile Include="DAL\ProductDAL.cs" />
+    <Compile Include="DAL\UnitsDAL.cs" />
     <Compile Include="DAL\UserDAL.cs" />
     <Compile Include="dbConnection.cs" />
     <Compile Include="UI\AddProduct.cs">
@@ -59,6 +62,12 @@
     </Compile>
     <Compile Include="UI\AddProduct.Designer.cs">
       <DependentUpon>AddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AddUnits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AddUnits.Designer.cs">
+      <DependentUpon>AddUnits.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\AdminDashboard.cs">
       <SubType>Form</SubType>
@@ -111,6 +120,12 @@
     <Compile Include="UI\UpdateProduct.Designer.cs">
       <DependentUpon>UpdateProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\UpdateUnits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UpdateUnits.Designer.cs">
+      <DependentUpon>UpdateUnits.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\UserDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +134,9 @@
     </Compile>
     <EmbeddedResource Include="UI\AddProduct.resx">
       <DependentUpon>AddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AddUnits.resx">
+      <DependentUpon>AddUnits.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
@@ -152,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UpdateProduct.resx">
       <DependentUpon>UpdateProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UpdateUnits.resx">
+      <DependentUpon>UpdateUnits.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UserDashboard.resx">
       <DependentUpon>UserDashboard.cs</DependentUpon>

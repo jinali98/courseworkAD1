@@ -25,10 +25,10 @@ namespace courseworkAD1.UI
                     MessageBox.Show("Please fill all the fields");
                     return;
                 }
-
+                Random number = new Random();
                 ProductBO productBO = new ProductBO();
                 productBO.ProductName = productName;
-                productBO.ProductId = Guid.NewGuid().ToString();
+                productBO.ProductId = number.Next(0, 100000).ToString() + "PROD";
 
                 ProductBLL productBLL = new ProductBLL();
                 productBLL.createNewProduct(productBO);

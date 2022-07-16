@@ -1,9 +1,9 @@
 ﻿using courseworkAD1.BLL;
+using courseworkAD1.BusinessObjects;
 using System;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
-using courseworkAD1.BusinessObjects;
 namespace courseworkAD1.UI
 
 {
@@ -47,13 +47,13 @@ namespace courseworkAD1.UI
         {
             try
             {
-            string productId = txtProductId.Text;
+                string productId = txtProductId.Text;
 
-            if (string.IsNullOrEmpty(productId))
-            {
-                MessageBox.Show("Please fill the input field");
-                return;
-            }
+                if (string.IsNullOrEmpty(productId))
+                {
+                    MessageBox.Show("Please fill the input field");
+                    return;
+                }
 
                 ProductBO productBO = new ProductBO();
                 productBO.ProductId = productId;
