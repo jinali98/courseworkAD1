@@ -62,6 +62,7 @@
             this.btnUnitsTb.TabIndex = 4;
             this.btnUnitsTb.Text = "Units";
             this.btnUnitsTb.UseVisualStyleBackColor = true;
+            this.btnUnitsTb.Click += new System.EventHandler(this.btnUnitsTb_Click_1);
             // 
             // btnCustomersTb
             // 
@@ -71,6 +72,7 @@
             this.btnCustomersTb.TabIndex = 3;
             this.btnCustomersTb.Text = "Customers";
             this.btnCustomersTb.UseVisualStyleBackColor = true;
+            this.btnCustomersTb.Click += new System.EventHandler(this.btnCustomersTb_Click_1);
             // 
             // btnProductsTb
             // 
@@ -90,6 +92,7 @@
             this.btnJobsTb.TabIndex = 1;
             this.btnJobsTb.Text = "Jobs";
             this.btnJobsTb.UseVisualStyleBackColor = true;
+            this.btnJobsTb.Click += new System.EventHandler(this.btnJobsTb_Click_1);
             // 
             // btnHomeTb
             // 

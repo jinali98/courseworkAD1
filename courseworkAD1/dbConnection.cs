@@ -25,6 +25,16 @@ namespace courseworkAD1
             return adapter;
         }
 
+        public SqlDataReader readRecord(string cmd)
+        {
+            con.Open();
+
+            //DataTable dt = new DataTable();
+            SqlCommand command = new SqlCommand(cmd, con);
+            SqlDataReader sqlDataReader = command.ExecuteReader();
+            return sqlDataReader;
+        }
+
         public void deleteData(string cmd)
         {
             con.Open();

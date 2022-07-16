@@ -17,7 +17,9 @@ namespace courseworkAD1
         {
             try
             {
-                string userid = Guid.NewGuid().ToString();
+                Random number = new Random();
+            
+                string userid = number.Next(0, 100000).ToString()+"USER";
                 string userType = "user";
                 string password = txtRegPassword.Text;
                 string conPassword = txtConfirmPassword.Text;
