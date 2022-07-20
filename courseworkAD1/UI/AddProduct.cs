@@ -53,5 +53,20 @@ namespace courseworkAD1.UI
             Products products = new Products();
             products.Show();
         }
+
+        private void txtProduct_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbProduct_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void regHeadingLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

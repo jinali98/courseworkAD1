@@ -41,6 +41,7 @@
             this.btnCreateJob.TabIndex = 0;
             this.btnCreateJob.Text = "Create A New Job";
             this.btnCreateJob.UseVisualStyleBackColor = true;
+            this.btnCreateJob.Click += new System.EventHandler(this.btnCreateJob_Click);
             // 
             // btnViewJobs
             // 
@@ -50,6 +51,7 @@
             this.btnViewJobs.TabIndex = 1;
             this.btnViewJobs.Text = "View All Jobs";
             this.btnViewJobs.UseVisualStyleBackColor = true;
+            this.btnViewJobs.Click += new System.EventHandler(this.btnViewJobs_Click);
             // 
             // btnTrackJob
             // 

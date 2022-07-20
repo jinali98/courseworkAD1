@@ -13,6 +13,15 @@ namespace courseworkAD1.UI
             InitializeComponent();
         }
 
+        private void resetFields()
+        {
+            txtDriverName.Text = "";
+            txtAssistantName.Text = "";
+            txtLorryNumber.Text = "";
+            txtContainerNumber.Text = "";
+
+        }
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
             try
@@ -40,10 +49,7 @@ namespace courseworkAD1.UI
                 UnitsBLL unitsBLL = new UnitsBLL();
                 unitsBLL.createNewUnit(unitsBO);
 
-                txtDriverName.Text = "";
-                txtAssistantName.Text = "";
-                txtLorryNumber.Text = "";
-                txtContainerNumber.Text = "";
+                resetFields();
 
 
             }
@@ -56,10 +62,7 @@ namespace courseworkAD1.UI
         private void btnCancel_Click(object sender, EventArgs e)
         {
 
-            txtDriverName.Text = "";
-            txtAssistantName.Text = "";
-            txtLorryNumber.Text = "";
-            txtContainerNumber.Text = "";
+            resetFields();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
