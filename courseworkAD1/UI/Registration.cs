@@ -39,13 +39,10 @@ namespace courseworkAD1
                 UserBLL userBLL = new UserBLL();
                 userBLL.saveNewUser(obj);
 
-                CurrentUserBO cuObj = new CurrentUserBO();
-                cuObj.UseridCurrentUser = userid;
-                cuObj.EmailCurrentUser = email;
-                cuObj.TypeCurrentUser = userType;
+                
 
                 this.Hide();
-                UserDashboard userDashboard = new UserDashboard();
+                UserDashboard userDashboard = new UserDashboard(userid, email, userType);
                 userDashboard.Show();
             }
             catch

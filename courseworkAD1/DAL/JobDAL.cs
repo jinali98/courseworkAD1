@@ -5,13 +5,13 @@ using System.Windows.Forms;
 
 namespace courseworkAD1.DAL
 {
-    public class ProductDAL
+    public class JobDAL
     {
-        public DialogResult createNewProduct(ProductBO obj)
+        public DialogResult createNewJob(JobBO obj)
         {
             try
             {
-                string cmd = "Insert into Products values ('" + (obj.ProductId) + "','" + obj.ProductName + "')";
+                string cmd = "Insert into Job values ('" + (obj.JobId) + "','" + obj.PickupLocation + "','" + obj.DropOffLocation + "','" + obj.NumberOfLoads + "','" + obj.ProductName + "','" + obj.ProductId + "','" + obj.JobStatus + "','" + obj.Date + "','" + obj.ContactNumber + "','" + obj.Userid + "')";
 
                 dbConnection con = new dbConnection();
                 con.createAndUpdate(cmd);
@@ -25,11 +25,11 @@ namespace courseworkAD1.DAL
 
         }
 
-        public DialogResult updateProduct(ProductBO obj)
+        public DialogResult updateJobStatus(JobBO obj)
         {
             try
             {
-                string cmd = "UPDATE Products set productName = '" + obj.ProductName + "' WHERE productid = '" + (obj.ProductId) + "'";
+                string cmd = "UPDATE Job set jobStatus = '" + obj.JobStatus + "' WHERE jobId = '" + (obj.JobId) + "'";
 
                 dbConnection con = new dbConnection();
                 con.createAndUpdate(cmd);
@@ -45,32 +45,21 @@ namespace courseworkAD1.DAL
 
         public void viewData(DataTable dt)
         {
-            string cmd = "select * from Products";
+            string cmd = "select * from Job";
             dbConnection con = new dbConnection();
             SqlDataAdapter adapter = con.readData(cmd, dt);
             adapter.Fill(dt);
 
         }
 
-   
-
-
-        public DialogResult deleteProduct(ProductBO obj)
+        public void viewJobsByUserid(DataTable dt, JobBO obj)
         {
-            try
-            {
-                string cmd = "DELETE from Products WHERE productid=('" + (obj.ProductId) + "')";
-
-                dbConnection con = new dbConnection();
-                con.deleteData(cmd);
-                return MessageBox.Show("Successfully Removed");
-
-            }
-            catch
-            {
-                throw;
-            }
+            string cmd = "SELECT * from Job WHERE userid = '" + (obj.Userid) + "'";
+            dbConnection con = new dbConnection();
+            SqlDataAdapter adapter = con.readData(cmd, dt);
+            adapter.Fill(dt);
 
         }
+
     }
 }

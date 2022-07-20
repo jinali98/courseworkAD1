@@ -65,6 +65,7 @@
             this.txtProduct.Name = "txtProduct";
             this.txtProduct.Size = new System.Drawing.Size(479, 30);
             this.txtProduct.TabIndex = 26;
+            this.txtProduct.TextChanged += new System.EventHandler(this.txtProduct_TextChanged);
             // 
             // lbProduct
             // 
@@ -75,6 +76,7 @@
             this.lbProduct.Size = new System.Drawing.Size(136, 25);
             this.lbProduct.TabIndex = 24;
             this.lbProduct.Text = "Product Name";
+            this.lbProduct.Click += new System.EventHandler(this.lbProduct_Click);
             // 
             // regHeadingLabel
             // 
@@ -86,6 +88,7 @@
             this.regHeadingLabel.TabIndex = 22;
             this.regHeadingLabel.Text = "Add New Product";
             this.regHeadingLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.regHeadingLabel.Click += new System.EventHandler(this.regHeadingLabel_Click);
             // 
             // btnBack
             // 

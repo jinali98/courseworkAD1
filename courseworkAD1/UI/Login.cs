@@ -11,6 +11,10 @@ namespace courseworkAD1.UI
         {
             InitializeComponent();
         }
+        string useridCurrentUser = "";
+        string emailCurrentUser = "";
+        string typeCurrentUser = "";
+
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -35,21 +39,22 @@ namespace courseworkAD1.UI
 
                 if (dt.Rows[0][3].ToString() == "admin")
                 {
-                    cuObj.UseridCurrentUser = dt.Rows[0][0].ToString();
-                    cuObj.EmailCurrentUser = dt.Rows[0][1].ToString();
-                    cuObj.TypeCurrentUser = dt.Rows[0][3].ToString();
+                     useridCurrentUser = dt.Rows[0][0].ToString();
+                     emailCurrentUser = dt.Rows[0][1].ToString();
+                     typeCurrentUser = dt.Rows[0][3].ToString();
                     this.Hide();
                     AdminDashboard adminDashboard = new AdminDashboard();
                     adminDashboard.Show();
                 }
                 else if (dt.Rows[0][3].ToString() == "user")
                 {
-                    cuObj.UseridCurrentUser = dt.Rows[0][0].ToString();
-                    cuObj.EmailCurrentUser = dt.Rows[0][1].ToString();
-                    cuObj.TypeCurrentUser = dt.Rows[0][3].ToString();
-                    this.Hide();
-                    UserDashboard userDashboard = new UserDashboard();
+                    useridCurrentUser = dt.Rows[0][0].ToString();
+                    emailCurrentUser = dt.Rows[0][1].ToString();
+                    typeCurrentUser = dt.Rows[0][3].ToString();
+                    UserDashboard userDashboard = new UserDashboard(useridCurrentUser, emailCurrentUser, typeCurrentUser);
+                    
                     userDashboard.Show();
+                    this.Hide();
                 }
                 else
                 {

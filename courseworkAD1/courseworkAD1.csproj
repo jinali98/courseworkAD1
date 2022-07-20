@@ -46,13 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\JobBLL.cs" />
     <Compile Include="BLL\ProductBLL.cs" />
     <Compile Include="BLL\UnitsBLL.cs" />
     <Compile Include="BLL\UserBLL.cs" />
     <Compile Include="BusinessObjects\CurrentUserBO.cs" />
+    <Compile Include="BusinessObjects\JobBO.cs" />
     <Compile Include="BusinessObjects\ProductBO.cs" />
     <Compile Include="BusinessObjects\UnitsBO.cs" />
     <Compile Include="BusinessObjects\UserBO.cs" />
+    <Compile Include="DAL\JobDAL.cs" />
     <Compile Include="DAL\ProductDAL.cs" />
     <Compile Include="DAL\UnitsDAL.cs" />
     <Compile Include="DAL\UserDAL.cs" />
@@ -75,6 +78,12 @@
     <Compile Include="UI\AdminDashboard.Designer.cs">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\CreateJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CreateJob.Designer.cs">
+      <DependentUpon>CreateJob.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Customers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +95,12 @@
     </Compile>
     <Compile Include="UI\Jobs.Designer.cs">
       <DependentUpon>Jobs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\JobsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\JobsList.Designer.cs">
+      <DependentUpon>JobsList.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Login.cs">
       <SubType>Form</SubType>
@@ -141,11 +156,17 @@
     <EmbeddedResource Include="UI\AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\CreateJob.resx">
+      <DependentUpon>CreateJob.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Customers.resx">
       <DependentUpon>Customers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Jobs.resx">
       <DependentUpon>Jobs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\JobsList.resx">
+      <DependentUpon>JobsList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -177,6 +198,7 @@
     <EmbeddedResource Include="UI\UserDashboard.resx">
       <DependentUpon>UserDashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
