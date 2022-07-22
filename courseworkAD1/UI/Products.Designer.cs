@@ -30,7 +30,6 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnUnitsTb = new System.Windows.Forms.Button();
-            this.btnCustomersTb = new System.Windows.Forms.Button();
             this.btnProductsTb = new System.Windows.Forms.Button();
             this.btnJobsTb = new System.Windows.Forms.Button();
             this.btnHomeTb = new System.Windows.Forms.Button();
@@ -47,35 +46,25 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.btnUnitsTb);
-            this.panel1.Controls.Add(this.btnCustomersTb);
             this.panel1.Controls.Add(this.btnProductsTb);
             this.panel1.Controls.Add(this.btnJobsTb);
             this.panel1.Controls.Add(this.btnHomeTb);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(831, 89);
+            this.panel1.Size = new System.Drawing.Size(1137, 89);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btnUnitsTb
             // 
-            this.btnUnitsTb.Location = new System.Drawing.Point(554, 29);
+            this.btnUnitsTb.Location = new System.Drawing.Point(427, 29);
             this.btnUnitsTb.Name = "btnUnitsTb";
             this.btnUnitsTb.Size = new System.Drawing.Size(108, 35);
             this.btnUnitsTb.TabIndex = 4;
             this.btnUnitsTb.Text = "Units";
             this.btnUnitsTb.UseVisualStyleBackColor = true;
             this.btnUnitsTb.Click += new System.EventHandler(this.btnUnitsTb_Click);
-            // 
-            // btnCustomersTb
-            // 
-            this.btnCustomersTb.Location = new System.Drawing.Point(422, 29);
-            this.btnCustomersTb.Name = "btnCustomersTb";
-            this.btnCustomersTb.Size = new System.Drawing.Size(108, 35);
-            this.btnCustomersTb.TabIndex = 3;
-            this.btnCustomersTb.Text = "Customers";
-            this.btnCustomersTb.UseVisualStyleBackColor = true;
-            this.btnCustomersTb.Click += new System.EventHandler(this.btnCustomersTb_Click);
             // 
             // btnProductsTb
             // 
@@ -113,16 +102,16 @@
             this.dgvProducts.AllowUserToResizeColumns = false;
             this.dgvProducts.AllowUserToResizeRows = false;
             this.dgvProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProducts.Location = new System.Drawing.Point(19, 130);
+            this.dgvProducts.Location = new System.Drawing.Point(180, 136);
             this.dgvProducts.Name = "dgvProducts";
             this.dgvProducts.RowHeadersWidth = 51;
             this.dgvProducts.RowTemplate.Height = 24;
-            this.dgvProducts.Size = new System.Drawing.Size(603, 224);
+            this.dgvProducts.Size = new System.Drawing.Size(379, 224);
             this.dgvProducts.TabIndex = 2;
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(656, 153);
+            this.btnUpdate.Location = new System.Drawing.Point(19, 95);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(108, 35);
             this.btnUpdate.TabIndex = 5;
@@ -132,7 +121,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(615, 384);
+            this.btnDelete.Location = new System.Drawing.Point(526, 386);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(108, 35);
             this.btnDelete.TabIndex = 6;
@@ -142,7 +131,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(656, 234);
+            this.btnAdd.Location = new System.Drawing.Point(155, 95);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(108, 35);
             this.btnAdd.TabIndex = 7;
@@ -153,16 +142,16 @@
             // txtProductId
             // 
             this.txtProductId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProductId.Location = new System.Drawing.Point(196, 386);
+            this.txtProductId.Location = new System.Drawing.Point(257, 391);
             this.txtProductId.Name = "txtProductId";
-            this.txtProductId.Size = new System.Drawing.Size(374, 30);
+            this.txtProductId.Size = new System.Drawing.Size(245, 30);
             this.txtProductId.TabIndex = 8;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(61, 386);
+            this.label1.Location = new System.Drawing.Point(122, 391);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(103, 25);
             this.label1.TabIndex = 9;
@@ -172,7 +161,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(831, 455);
+            this.ClientSize = new System.Drawing.Size(1137, 628);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtProductId);
             this.Controls.Add(this.btnAdd);
@@ -194,7 +183,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnUnitsTb;
-        private System.Windows.Forms.Button btnCustomersTb;
         private System.Windows.Forms.Button btnProductsTb;
         private System.Windows.Forms.Button btnJobsTb;
         private System.Windows.Forms.Button btnHomeTb;

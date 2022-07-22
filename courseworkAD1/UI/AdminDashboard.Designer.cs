@@ -29,22 +29,23 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnUnitsTb = new System.Windows.Forms.Button();
-            this.btnCustomersTb = new System.Windows.Forms.Button();
             this.btnProductsTb = new System.Windows.Forms.Button();
             this.btnJobsTb = new System.Windows.Forms.Button();
             this.btnHomeTb = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnaccept = new System.Windows.Forms.Button();
+            this.btndecline = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnLogout);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnUnitsTb);
-            this.panel1.Controls.Add(this.btnCustomersTb);
             this.panel1.Controls.Add(this.btnProductsTb);
             this.panel1.Controls.Add(this.btnJobsTb);
             this.panel1.Controls.Add(this.btnHomeTb);
@@ -54,25 +55,35 @@
             this.panel1.Size = new System.Drawing.Size(897, 89);
             this.panel1.TabIndex = 0;
             // 
+            // btnLogout
+            // 
+            this.btnLogout.Location = new System.Drawing.Point(688, 29);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(112, 35);
+            this.btnLogout.TabIndex = 6;
+            this.btnLogout.Text = "Log Out";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(553, 29);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(112, 35);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "EXIT";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // btnUnitsTb
             // 
-            this.btnUnitsTb.Location = new System.Drawing.Point(554, 29);
+            this.btnUnitsTb.Location = new System.Drawing.Point(422, 29);
             this.btnUnitsTb.Name = "btnUnitsTb";
             this.btnUnitsTb.Size = new System.Drawing.Size(108, 35);
             this.btnUnitsTb.TabIndex = 4;
             this.btnUnitsTb.Text = "Units";
             this.btnUnitsTb.UseVisualStyleBackColor = true;
             this.btnUnitsTb.Click += new System.EventHandler(this.btnUnitsTb_Click_1);
-            // 
-            // btnCustomersTb
-            // 
-            this.btnCustomersTb.Location = new System.Drawing.Point(422, 29);
-            this.btnCustomersTb.Name = "btnCustomersTb";
-            this.btnCustomersTb.Size = new System.Drawing.Size(108, 35);
-            this.btnCustomersTb.TabIndex = 3;
-            this.btnCustomersTb.Text = "Customers";
-            this.btnCustomersTb.UseVisualStyleBackColor = true;
-            this.btnCustomersTb.Click += new System.EventHandler(this.btnCustomersTb_Click_1);
             // 
             // btnProductsTb
             // 
@@ -103,23 +114,25 @@
             this.btnHomeTb.Text = "Home";
             this.btnHomeTb.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnaccept
             // 
-            this.button1.Location = new System.Drawing.Point(25, 146);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(147, 279);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "View List Of Accepted Jobs";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnaccept.Location = new System.Drawing.Point(25, 146);
+            this.btnaccept.Name = "btnaccept";
+            this.btnaccept.Size = new System.Drawing.Size(147, 279);
+            this.btnaccept.TabIndex = 5;
+            this.btnaccept.Text = "View List Of Accepted Jobs";
+            this.btnaccept.UseVisualStyleBackColor = true;
+            this.btnaccept.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btndecline
             // 
-            this.button2.Location = new System.Drawing.Point(251, 146);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(147, 279);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "View List Of Declined Jobs";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btndecline.Location = new System.Drawing.Point(251, 146);
+            this.btndecline.Name = "btndecline";
+            this.btndecline.Size = new System.Drawing.Size(147, 279);
+            this.btndecline.TabIndex = 6;
+            this.btndecline.Text = "View List Of Declined Jobs";
+            this.btndecline.UseVisualStyleBackColor = true;
+            this.btndecline.Click += new System.EventHandler(this.btndecline_Click);
             // 
             // button3
             // 
@@ -129,28 +142,20 @@
             this.button3.TabIndex = 7;
             this.button3.Text = "View List Of Completed Jobs";
             this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(697, 146);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(147, 279);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "View List Of Jobs In Current Month";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // AdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(897, 500);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btndecline);
+            this.Controls.Add(this.btnaccept);
             this.Controls.Add(this.panel1);
             this.Name = "AdminDashboard";
             this.Text = "Home";
+            this.Load += new System.EventHandler(this.AdminDashboard_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -160,13 +165,13 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnUnitsTb;
-        private System.Windows.Forms.Button btnCustomersTb;
         private System.Windows.Forms.Button btnProductsTb;
         private System.Windows.Forms.Button btnJobsTb;
         private System.Windows.Forms.Button btnHomeTb;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnaccept;
+        private System.Windows.Forms.Button btndecline;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnLogout;
     }
 }

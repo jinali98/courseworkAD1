@@ -133,6 +133,7 @@
             this.Controls.Add(this.regHeadingLabel);
             this.Name = "UpdateProduct";
             this.Text = "UpdateProduct";
+            this.Load += new System.EventHandler(this.UpdateProduct_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

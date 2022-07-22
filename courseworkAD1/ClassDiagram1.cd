@@ -1,239 +1,274 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="courseworkAD1.BLL.JobBLL">
-    <Position X="8" Y="3.75" Width="1.75" />
+    <Position X="21" Y="1.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AgAAAAAAAAAAAAAAAAAAAgAAEAAAAAEAAAAAAAAAAAA=</HashCode>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAgAAEAAAAAEIAAAAQAAAAAA=</HashCode>
       <FileName>BLL\JobBLL.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="courseworkAD1.BLL.LoadBLL">
+    <Position X="3" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAICABAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BLL\LoadBLL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="courseworkAD1.BLL.ProductBLL">
-    <Position X="15.25" Y="3.75" Width="1.75" />
+    <Position X="36.75" Y="1.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAAAAQAIAAAIAAAAAA=</HashCode>
       <FileName>BLL\ProductBLL.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="courseworkAD1.BLL.UnitsBLL">
-    <Position X="34.75" Y="3.75" Width="1.5" />
+    <Position X="5.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAgAAIAAAAgAAAAAAAAAAAAAIAAAAASA=</HashCode>
       <FileName>BLL\UnitsBLL.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="courseworkAD1.BLL.UserBLL">
-    <Position X="27.25" Y="3.75" Width="1.75" />
+    <Position X="27.75" Y="1.75" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAEABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAEABAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
       <FileName>BLL\UserBLL.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="courseworkAD1.BusinessObjects.CurrentUserBO">
-    <Position X="29.75" Y="3.75" Width="1.75" />
+    <Position X="0.75" Y="1.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAIACAAAAAgAAAAAAAQAAACEAAAAAAAAAAAAA=</HashCode>
       <FileName>BusinessObjects\CurrentUserBO.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="courseworkAD1.BusinessObjects.JobBO">
-    <Position X="17.75" Y="3.75" Width="1.5" />
+    <Position X="30" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EgAQIBAAACAQAQAAAAAAAAAAAIAAERABABgAAQIIAIA=</HashCode>
       <FileName>BusinessObjects\JobBO.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="courseworkAD1.BusinessObjects.LoadBO">
+    <Position X="12" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAACAAAAQAEAAEABAAAAAAAAAAAAAQAAAAEAA=</HashCode>
+      <FileName>BusinessObjects\LoadBO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="courseworkAD1.BusinessObjects.ProductBO">
-    <Position X="22.5" Y="3.75" Width="1.5" />
+    <Position X="7.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAIAAA=</HashCode>
       <FileName>BusinessObjects\ProductBO.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="courseworkAD1.BusinessObjects.UnitsBO">
-    <Position X="12.75" Y="3.75" Width="1.75" />
+    <Position X="14.25" Y="1.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAgAAAAIAAAQCQAAEAEAAAAgAAAAKAAAAAAAAAAA=</HashCode>
       <FileName>BusinessObjects\UnitsBO.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="courseworkAD1.BusinessObjects.UserBO">
-    <Position X="37" Y="3.75" Width="1.5" />
+    <Position X="39" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAIAAAACAAAAAgAAAAAAAAAAABAAACAQAAAgAAAAA=</HashCode>
       <FileName>BusinessObjects\UserBO.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="courseworkAD1.DAL.JobDAL">
-    <Position X="24.75" Y="3.75" Width="1.75" />
+    <Position X="41.25" Y="1.75" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAQAAAAAAAgAAAAAAAAEAAAAAAAgAAAA=</HashCode>
+      <HashCode>AAABAAAAAAAAAQAAAAAAAgAAAAAAAAEAAQAAAAgAAAA=</HashCode>
       <FileName>DAL\JobDAL.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="courseworkAD1.DAL.LoadDAL">
+    <Position X="23.25" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAACAAAAAAAAAAAAAAAAAAEAAAAAAAgAAAA=</HashCode>
+      <FileName>DAL\LoadDAL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="courseworkAD1.DAL.ProductDAL">
-    <Position X="32.25" Y="3.75" Width="1.75" />
+    <Position X="16.5" Y="1.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAAAAQAAAAAIAgAAAA=</HashCode>
       <FileName>DAL\ProductDAL.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="courseworkAD1.DAL.UnitsDAL">
-    <Position X="5.75" Y="3.75" Width="1.5" />
+    <Position X="25.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAIAAAAgAAAAAAAAAAAAAAAAgAAUA=</HashCode>
       <FileName>DAL\UnitsDAL.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="courseworkAD1.DAL.UserDAL">
-    <Position X="0.75" Y="3.75" Width="1.75" />
+    <Position X="9.75" Y="1.75" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAgAA=</HashCode>
       <FileName>DAL\UserDAL.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="courseworkAD1.dbConnection">
-    <Position X="3.25" Y="3.75" Width="1.75" />
+    <Position X="18.75" Y="1.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAMAAAgAAEAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>dbConnection.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="courseworkAD1.Program" Collapsed="true">
-    <Position X="39.5" Y="0.5" Width="1.5" />
+    <Position X="43.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="courseworkAD1.Registration">
-    <Position X="5.75" Y="11" Width="1.75" />
+    <Position X="10.75" Y="9" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAASACAAQBAAEACEAAACAAAACAAAAAQAAABCAAA=</HashCode>
+      <HashCode>AAAAAAAaACAAQBAAEACEAAACAAAACAAAAAQAAABCAAA=</HashCode>
       <FileName>UI\Registration.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="courseworkAD1.Properties.Resources">
-    <Position X="20" Y="3.75" Width="1.75" />
+    <Position X="32.25" Y="1.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
     </TypeIdentifier>
   </Class>
   <Class Name="courseworkAD1.Properties.Settings" Collapsed="true">
-    <Position X="41.25" Y="0.5" Width="1.5" />
+    <Position X="7.75" Y="6" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
     </TypeIdentifier>
   </Class>
-  <Class Name="courseworkAD1.UI.AddProduct">
-    <Position X="0.5" Y="11" Width="2" />
+  <Class Name="courseworkAD1.UI.AcceptJob">
+    <Position X="0.5" Y="9" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>ACAAAAAAACAAgAEAAACAAMICAAAAgABAAAAAAAACAAo=</HashCode>
+      <HashCode>AAAAAQAIACAAQDAAAACAAIACAAAAAABAAAQQCAACAAA=</HashCode>
+      <FileName>UI\AcceptJob.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="courseworkAD1.UI.AddProduct">
+    <Position X="8" Y="9" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAIACAAgAEAAACAAMICAAAAgABAAAAAAAACACo=</HashCode>
       <FileName>UI\AddProduct.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="courseworkAD1.UI.AddUnits">
-    <Position X="8.25" Y="11" Width="1.75" />
+    <Position X="13.25" Y="9" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAABEAACCAIMICAAAAgABAAAAAAAQCAAo=</HashCode>
+      <HashCode>AAAAAAAIACAAABEAACCAIMICAAAAgABAAAAAAAQCAAo=</HashCode>
       <FileName>UI\AddUnits.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="courseworkAD1.UI.AdminDashboard">
-    <Position X="10.75" Y="11" Width="2" />
+    <Position X="20.75" Y="9" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAEBAAAAACACAAAAEECAAAACAFA4AABQAAAAAQEAAEA=</HashCode>
+      <HashCode>AAABAAAICCACAIAAMECAABASABAoAAhAAFAAASEAAEA=</HashCode>
       <FileName>UI\AdminDashboard.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="courseworkAD1.UI.CreateJob">
-    <Position X="16" Y="11" Width="1.75" />
+    <Position X="26.25" Y="9" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>ABAAAAAAACAIABEAgACAAMACAgAAgABQCAAABAQCAEo=</HashCode>
+      <HashCode>ABAAAAAIACAIABEAgACAAMACAgAAgABQCAAABAQCAEo=</HashCode>
       <FileName>UI\CreateJob.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="courseworkAD1.UI.Customers">
-    <Position X="23.75" Y="11" Width="1.75" />
-    <TypeIdentifier>
-      <HashCode>AAEBAAAAACAAAAAAMACAAAACAAAAAABAAAAAAQEAAAA=</HashCode>
-      <FileName>UI\Customers.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="courseworkAD1.UI.Jobs">
-    <Position X="18.5" Y="11" Width="1.75" />
+    <Position X="23.5" Y="9" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAEhAAAAACAAAAAQEACAAgACAAAAAABAAAAAAQEAAAQ=</HashCode>
+      <HashCode>ACABAIAIICAgAghANECEAgICAAARAABAAAAAAQEAAAQ=</HashCode>
       <FileName>UI\Jobs.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="courseworkAD1.UI.JobsList">
-    <Position X="26.25" Y="11" Width="1.75" />
+    <Position X="28.75" Y="9" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>ABAAAAABACAAAAAAAACAAoACAAAAAABQAAAAAAQAAAA=</HashCode>
+      <HashCode>ABAAAAAJACAAAAAAAACAAoACAAAAAABQAAAAAAQAAAA=</HashCode>
       <FileName>UI\JobsList.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="courseworkAD1.UI.Login">
-    <Position X="3.25" Y="11" Width="1.75" />
+  <Class Name="courseworkAD1.UI.jobsReport">
+    <Position X="33.75" Y="9" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAASICCAQAAAEACEAAACAAAACEAAAAQAAABCAAA=</HashCode>
+      <HashCode>AAAAEAAIACAAAAAAAACAAoACAIAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>UI\jobsReport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="courseworkAD1.UI.Login">
+    <Position X="15.75" Y="9" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAaICCAQAAAEACEAAACAIAACEAAAAQAAABCAAA=</HashCode>
       <FileName>UI\Login.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="courseworkAD1.UI.Navigation">
-    <Position X="10.5" Y="3.75" Width="1.5" />
+    <Position X="34.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAIAAAAAAABAAAAAAAAMAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAIAAAAAAABAAAAAAAAEAACAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>UI\Navigation.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="courseworkAD1.UI.Products">
-    <Position X="28.75" Y="11" Width="2" />
+    <Position X="3" Y="9" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAEBAAAAJSAIABgQMECAAACCAAQAgABAAAAIAQEAAQY=</HashCode>
+      <HashCode>ABABAAAIJSAIABAQMECAAACCAAQAgABAAAAIAQEAAQY=</HashCode>
       <FileName>UI\Products.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="courseworkAD1.UI.Units">
-    <Position X="21" Y="11" Width="2" />
+  <Class Name="courseworkAD1.UI.SingleJobView">
+    <Position X="36.25" Y="9" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAEBAAIAJCACABgQEECAAAACAAQAgABAAEAIAQEAAQ4=</HashCode>
+      <HashCode>0gBAAAAoACBACBACAAKCAIACAAAQABBAAIAAAAEAAGg=</HashCode>
+      <FileName>UI\SingleJobView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="courseworkAD1.UI.Units">
+    <Position X="38.75" Y="9" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAABAAIIJCACABAQEECAAAACAAQAgABAAEAIAQEAAQ4=</HashCode>
       <FileName>UI\Units.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="courseworkAD1.UI.UpdateProduct">
-    <Position X="13.5" Y="11" Width="1.75" />
+    <Position X="18.25" Y="9" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>ACAAAAAABSAAABEQAACAAMACAAAAAABAAAAAAAACAAg=</HashCode>
+      <HashCode>ACQAAAAIBSAAABEQAACAAMACAAAAAABAAAAAAAACAAg=</HashCode>
       <FileName>UI\UpdateProduct.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="courseworkAD1.UI.UpdateUnits">
-    <Position X="31.5" Y="11" Width="1.75" />
+    <Position X="31.25" Y="9" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAIAABCAAAJFQACCAIMICAAAAAABAAEAAAAQCAAg=</HashCode>
+      <HashCode>AAAAAIAIBCAAAJFQACCAIMICAAAAAABAAEAAAAQCAAg=</HashCode>
       <FileName>UI\UpdateUnits.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="courseworkAD1.UI.UserDashboard">
-    <Position X="34" Y="11" Width="1.75" />
+    <Position X="5.5" Y="9" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>ABAAAAAAAGAAAAAAgACAAAACAAAAAAIQAIAAAAQAAAA=</HashCode>
+      <HashCode>ABAAAAAIAGAAAIAAgACAAAACAAAIQAAQAMAAACQAAAA=</HashCode>
       <FileName>UI\UserDashboard.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="System.Object">
-    <Position X="18.75" Y="0.5" Width="1.75" />
+  <Class Name="System.Windows.Forms.Form" Collapsed="true">
+    <Position X="19.75" Y="7.5" Width="1.5" />
     <TypeIdentifier />
   </Class>
-  <Class Name="System.Windows.Forms.Form" Collapsed="true">
-    <Position X="17.5" Y="9.5" Width="1.5" />
-    <NestedTypes>
-      <Class Name="System.Windows.Forms.Form.ControlCollection" Collapsed="true">
-        <TypeIdentifier />
-      </Class>
-    </NestedTypes>
+  <Class Name="System.Object" Collapsed="true">
+    <Position X="21" Y="0.5" Width="1.5" />
     <TypeIdentifier />
+  </Class>
+  <Class Name="System.Configuration.ApplicationSettingsBase" Collapsed="true">
+    <Position X="7.75" Y="4.5" Width="1.75" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

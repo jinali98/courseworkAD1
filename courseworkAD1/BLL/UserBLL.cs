@@ -33,5 +33,19 @@ namespace courseworkAD1.BLL
                 throw;
             }
         }
+
+        public DataTable verifyUserWhenRegistering(UserBO obj)
+        {
+            try
+            {
+                UserDAL userDA = new UserDAL();
+                DataTable dt = userDA.verifyUserWhenRegistering(obj);
+                return dt;
+            }
+            catch
+            {
+                throw;
+            }
+        }
     }
 }

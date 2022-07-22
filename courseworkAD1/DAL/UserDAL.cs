@@ -46,5 +46,26 @@ namespace courseworkAD1.DAL
             }
         }
 
+        public DataTable verifyUserWhenRegistering(UserBO obj)
+        {
+            try
+            {
+                string cmd = "SELECT * FROM Users WHERE email='" + obj.Email + "'";
+
+                dbConnection con = new dbConnection();
+                DataTable dt = new DataTable();
+                SqlDataAdapter adapter = con.readData(cmd, dt);
+
+                adapter.Fill(dt);
+                return dt;
+
+
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
     }
 }

@@ -33,7 +33,6 @@
             this.dgvUnits = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnUnitsTb = new System.Windows.Forms.Button();
-            this.btnCustomersTb = new System.Windows.Forms.Button();
             this.btnProductsTb = new System.Windows.Forms.Button();
             this.btnJobsTb = new System.Windows.Forms.Button();
             this.btnHomeTb = new System.Windows.Forms.Button();
@@ -77,7 +76,6 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.btnUnitsTb);
-            this.panel1.Controls.Add(this.btnCustomersTb);
             this.panel1.Controls.Add(this.btnProductsTb);
             this.panel1.Controls.Add(this.btnJobsTb);
             this.panel1.Controls.Add(this.btnHomeTb);
@@ -89,25 +87,16 @@
             // 
             // btnUnitsTb
             // 
-            this.btnUnitsTb.Location = new System.Drawing.Point(650, 30);
+            this.btnUnitsTb.Location = new System.Drawing.Point(433, 22);
             this.btnUnitsTb.Name = "btnUnitsTb";
             this.btnUnitsTb.Size = new System.Drawing.Size(108, 35);
             this.btnUnitsTb.TabIndex = 4;
             this.btnUnitsTb.Text = "Units";
             this.btnUnitsTb.UseVisualStyleBackColor = true;
             // 
-            // btnCustomersTb
-            // 
-            this.btnCustomersTb.Location = new System.Drawing.Point(518, 30);
-            this.btnCustomersTb.Name = "btnCustomersTb";
-            this.btnCustomersTb.Size = new System.Drawing.Size(108, 35);
-            this.btnCustomersTb.TabIndex = 3;
-            this.btnCustomersTb.Text = "Customers";
-            this.btnCustomersTb.UseVisualStyleBackColor = true;
-            // 
             // btnProductsTb
             // 
-            this.btnProductsTb.Location = new System.Drawing.Point(251, 30);
+            this.btnProductsTb.Location = new System.Drawing.Point(163, 22);
             this.btnProductsTb.Name = "btnProductsTb";
             this.btnProductsTb.Size = new System.Drawing.Size(108, 35);
             this.btnProductsTb.TabIndex = 2;
@@ -117,7 +106,7 @@
             // 
             // btnJobsTb
             // 
-            this.btnJobsTb.Location = new System.Drawing.Point(386, 30);
+            this.btnJobsTb.Location = new System.Drawing.Point(298, 22);
             this.btnJobsTb.Name = "btnJobsTb";
             this.btnJobsTb.Size = new System.Drawing.Size(108, 35);
             this.btnJobsTb.TabIndex = 1;
@@ -126,7 +115,7 @@
             // 
             // btnHomeTb
             // 
-            this.btnHomeTb.Location = new System.Drawing.Point(115, 30);
+            this.btnHomeTb.Location = new System.Drawing.Point(27, 22);
             this.btnHomeTb.Name = "btnHomeTb";
             this.btnHomeTb.Size = new System.Drawing.Size(108, 35);
             this.btnHomeTb.TabIndex = 0;
@@ -190,7 +179,6 @@
         private System.Windows.Forms.DataGridView dgvUnits;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnUnitsTb;
-        private System.Windows.Forms.Button btnCustomersTb;
         private System.Windows.Forms.Button btnProductsTb;
         private System.Windows.Forms.Button btnJobsTb;
         private System.Windows.Forms.Button btnHomeTb;

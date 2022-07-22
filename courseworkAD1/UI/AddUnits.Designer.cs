@@ -177,6 +177,7 @@
             this.Controls.Add(this.regHeadingLabel);
             this.Name = "AddUnits";
             this.Text = "AddUnits";
+            this.Load += new System.EventHandler(this.AddUnits_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
