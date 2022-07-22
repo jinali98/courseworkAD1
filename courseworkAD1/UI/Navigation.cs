@@ -2,6 +2,7 @@
 {
     public class Navigation
     {
+        // navigation menu 
         public void homeTab()
         {
             AdminDashboard adminDashboard = new AdminDashboard();
@@ -16,12 +17,6 @@
         {
             Jobs jobs = new Jobs();
             jobs.Show();
-        }
-
-        public void customersTab()
-        {
-            Customers customers = new Customers();
-            customers.Show();
         }
 
         public void unitsTab()

@@ -1,13 +1,17 @@
 ﻿using courseworkAD1.BLL;
+using courseworkAD1.BusinessObjects;
 using System;
 using System.Data;
+using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
-using courseworkAD1.BusinessObjects;
 
 namespace courseworkAD1.UI
 {
     public partial class CreateJob : Form
     {
+
+        // public varibles which can be accssible from all the methods in the form
         public string currentId = "";
         public string currentEmail = "";
         public string currentType = "";
@@ -19,8 +23,36 @@ namespace courseworkAD1.UI
             currentType = type;
         }
 
+        private void addStyles()
+        {
+            this.BackColor = Color.FromArgb(51, 0, 102);
+            this.Size = new Size(800, 600);
+
+            foreach (Control c in this.Controls)
+            {
+                if (c is Label)
+                {
+                    ((Label)c).ForeColor = Color.AntiqueWhite;
+                    ((Label)c).FlatStyle = FlatStyle.Flat;
+                    ((Label)c).Font = new Font(Label.DefaultFont, FontStyle.Bold);
+
+                }
+            }
+
+            foreach (var button in this.Controls.OfType<Button>())
+            {
+                button.BackColor = Color.Beige;
+                button.Font = new Font(Button.DefaultFont, FontStyle.Bold);
+                button.ForeColor = Color.Black;
+                button.FlatStyle = FlatStyle.Flat;
+                button.TextAlign = ContentAlignment.MiddleCenter;
+            }
+        }
+
         private void CreateJob_Load(object sender, EventArgs e)
         {
+            addStyles();
+            // fetch all the procucts from the db and add those to the combo box - drop down
             DataTable dt = new DataTable();
             ProductBLL productBLL = new ProductBLL();
             productBLL.viewAllProducts(dt);
@@ -42,6 +74,7 @@ namespace courseworkAD1.UI
             resetFields();
         }
 
+        // navigate back to the user dashboard
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -53,31 +86,42 @@ namespace courseworkAD1.UI
         {
             try
             {
+                // crate an instance of Random class
                 Random number = new Random();
 
                 string dropOff = txtDropOff.Text;
                 int noOfLoads = Convert.ToInt32(txtNoOfLoads.Text);
                 string contactNumber = txtNumber.Text;
                 string pickup = txtPickup.Text;
-                string jobid = number.Next(0, 100000).ToString() + "JOB";
-                string productid = comboProducts.ValueMember;
-                string productname = comboProducts.DisplayMember;
+                string productid = comboProducts.SelectedValue.ToString();
+                string productname = comboProducts.Text;
 
+                // create an instance of JobBO and set values
                 JobBO jobBO = new JobBO();
                 jobBO.ProductId = productid;
                 jobBO.ProductName = productname;
                 jobBO.ContactNumber = contactNumber;
                 jobBO.DropOffLocation = dropOff;
                 jobBO.PickupLocation = pickup;
-                jobBO.NumberOfLoads = (noOfLoads);
+                jobBO.NumberOfLoads = noOfLoads;
                 jobBO.Date = DateTime.UtcNow;
-                jobBO.JobId = jobid;
                 jobBO.JobStatus = "placed";
                 jobBO.Userid = currentId;
 
                 JobBLL jobBLL = new JobBLL();
-                jobBLL.createNewJob(jobBO);
+                // as user can enter number of loads from the product they selected 
+                // create a Job for each procut load
+                int numberOfJobs = 0;
+                while (numberOfJobs < noOfLoads)
+                {
+                    string jobid = number.Next(0, 100000).ToString() + "JOB";
+                    jobBO.JobId = jobid;
 
+                    jobBLL.createNewJob(jobBO);
+                    numberOfJobs++;
+                }
+
+                MessageBox.Show(noOfLoads + " Jobs has created Successfully.");
 
                 resetFields();
             }

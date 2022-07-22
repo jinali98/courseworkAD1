@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using courseworkAD1.BusinessObjects;
+﻿using courseworkAD1.BusinessObjects;
 using courseworkAD1.DAL;
 using System.Data;
 using System.Windows.Forms;
@@ -12,13 +7,13 @@ namespace courseworkAD1.BLL
 {
     public class JobBLL
     {
-        public DialogResult createNewJob(JobBO obj)
+        public void createNewJob(JobBO obj)
         {
 
             try
             {
                 JobDAL jobDAL = new JobDAL();
-                return jobDAL.createNewJob(obj);
+                jobDAL.createNewJob(obj);
             }
             catch
             {
@@ -38,14 +33,14 @@ namespace courseworkAD1.BLL
                 throw;
             }
         }
-      
+
 
         public void viewListOfJobs(DataTable dt)
         {
             try
             {
                 JobDAL jobDAL = new JobDAL();
-               jobDAL.viewData(dt);
+                jobDAL.viewData(dt);
 
             }
             catch
@@ -60,6 +55,33 @@ namespace courseworkAD1.BLL
             {
                 JobDAL jobDAL = new JobDAL();
                 jobDAL.viewJobsByUserid(dt, obj);
+
+            }
+            catch
+            {
+                throw;
+            }
+        }
+        public void getJobByJobId(DataTable dt, JobBO obj)
+        {
+            try
+            {
+                JobDAL jobDAL = new JobDAL();
+                jobDAL.viewJobByJobId(dt, obj);
+
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public void getJobByJobStatus(DataTable dt, JobBO obj)
+        {
+            try
+            {
+                JobDAL jobDAL = new JobDAL();
+                jobDAL.viewJobByJobsByStatus(dt, obj);
 
             }
             catch

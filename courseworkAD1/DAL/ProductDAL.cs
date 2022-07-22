@@ -52,9 +52,6 @@ namespace courseworkAD1.DAL
 
         }
 
-   
-
-
         public DialogResult deleteProduct(ProductBO obj)
         {
             try

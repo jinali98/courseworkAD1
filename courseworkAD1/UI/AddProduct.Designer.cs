@@ -114,6 +114,7 @@
             this.Controls.Add(this.regHeadingLabel);
             this.Name = "AddProduct";
             this.Text = "AddProduct";
+            this.Load += new System.EventHandler(this.AddProduct_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

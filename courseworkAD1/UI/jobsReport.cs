@@ -1,29 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using courseworkAD1.BLL;
+using courseworkAD1.BusinessObjects;
+using System;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using courseworkAD1.BLL;
-
 using System.Windows.Forms;
-using courseworkAD1.BusinessObjects;
 
 namespace courseworkAD1.UI
 {
-    public partial class JobsList : Form
+    public partial class jobsReport : Form
     {
-        public string currentId = "";
-        public string currentEmail = "";
-        public string currentType = "";
-        public JobsList(string userid, string email = "", string type = "")
+        public string jobStatus;
+        public jobsReport(string status)
         {
             InitializeComponent();
-            currentId = userid;
-            currentEmail = email;
-            currentType = type;
+            jobStatus = status;
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AdminDashboard adminDashboard = new AdminDashboard();
+            adminDashboard.Show();
+
         }
         private void addStyles()
         {
@@ -51,34 +50,26 @@ namespace courseworkAD1.UI
             }
         }
 
-        private void JobsList_Load(object sender, EventArgs e)
+        private void jobsReport_Load(object sender, EventArgs e)
         {
-            // when the form load get the latest list of jobs and display using a data grid view
+            // when the form load get a list of jobs matches the job status
             addStyles();
             try
             {
+                DataTable dt = new DataTable();
+
                 JobBLL jobBLL = new JobBLL();
                 JobBO jobBO = new JobBO();
-                DataTable dt = new DataTable();
-                jobBO.Userid = currentId;
-                jobBLL.viewListOfJobsByUser(dt,jobBO);
+                jobBO.JobStatus = jobStatus;
+                jobBLL.getJobByJobStatus(dt, jobBO);
                 dgvJobs.DataSource = dt;
-                
+
             }
             catch
             {
                 MessageBox.Show("Error Occurred");
 
             }
-
         }
-
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            UserDashboard userDashboard = new UserDashboard(currentId, currentEmail, currentType);
-            userDashboard.Show();
-        }
-
     }
 }

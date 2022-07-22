@@ -7,16 +7,15 @@ namespace courseworkAD1.DAL
 {
     public class JobDAL
     {
-        public DialogResult createNewJob(JobBO obj)
+        public void createNewJob(JobBO obj)
         {
             try
             {
                 string cmd = "Insert into Job values ('" + (obj.JobId) + "','" + obj.PickupLocation + "','" + obj.DropOffLocation + "','" + obj.NumberOfLoads + "','" + obj.ProductName + "','" + obj.ProductId + "','" + obj.JobStatus + "','" + obj.Date + "','" + obj.ContactNumber + "','" + obj.Userid + "')";
 
                 dbConnection con = new dbConnection();
+                
                 con.createAndUpdate(cmd);
-                return MessageBox.Show("Successfully Added");
-
             }
             catch
             {
@@ -33,7 +32,8 @@ namespace courseworkAD1.DAL
 
                 dbConnection con = new dbConnection();
                 con.createAndUpdate(cmd);
-                return MessageBox.Show("Successfully Updated");
+                
+                return MessageBox.Show("Successfully Updated the Job Status");
 
             }
             catch
@@ -55,6 +55,23 @@ namespace courseworkAD1.DAL
         public void viewJobsByUserid(DataTable dt, JobBO obj)
         {
             string cmd = "SELECT * from Job WHERE userid = '" + (obj.Userid) + "'";
+            dbConnection con = new dbConnection();
+            SqlDataAdapter adapter = con.readData(cmd, dt);
+            adapter.Fill(dt);
+
+        }
+
+        public void viewJobByJobId(DataTable dt, JobBO obj)
+        {
+            string cmd = "SELECT * from Job WHERE jobId = '" + (obj.JobId) + "'";
+            dbConnection con = new dbConnection();
+            SqlDataAdapter adapter = con.readData(cmd, dt);
+            adapter.Fill(dt);
+
+        }
+        public void viewJobByJobsByStatus(DataTable dt, JobBO obj)
+        {
+            string cmd = "SELECT * from Job WHERE jobStatus = '" + (obj.JobStatus) + "'";
             dbConnection con = new dbConnection();
             SqlDataAdapter adapter = con.readData(cmd, dt);
             adapter.Fill(dt);
